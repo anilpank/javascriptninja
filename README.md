@@ -34,6 +34,22 @@ http://www.ecma-international.org/ecma-262/7.0/index.html
 - Use Brackets editor and install JSHint extenstion. Then you can see all the error when you work on your javascript file.
 - Another option is to install jshint through npm (npm install -g jshint) and then from command line run it on a file (jshint code.js)
 
+### Curly Braces
+- The recommendation for curly braces is to put opening curly braces on the same line.
+```javascript
+```function service(){
+   var get = function() {
+       console.log('get');
+   }
+   var set = function() {
+       console.log('set');
+   }
+   return {
+       get: get,
+       set: set
+   }
+}
+
 
 
 
