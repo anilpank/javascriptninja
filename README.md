@@ -37,7 +37,7 @@ http://www.ecma-international.org/ecma-262/7.0/index.html
 ### Curly Braces
 - The recommendation for curly braces is to put opening curly braces on the same line.
 ```javascript
-```function service(){
+function service(){
    var get = function() {
        console.log('get');
    }
@@ -49,6 +49,7 @@ http://www.ecma-international.org/ecma-262/7.0/index.html
        set: set
    }
 }
+```
 
 
 
