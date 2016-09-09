@@ -97,8 +97,11 @@ else {
 
 ### Behaviors
 - Javascript is helpful. That's not always a good thing.
+- When you forget to put var in front of variable, Javascript makes it a global variable.
 
 
-
-
+### Strict Mode
+- Javascript is trying to help. Don't let it.
+- Use ```'use strict';``` as shown in strictMode.js file. That would make sure that unintended code would blow up.
+- In production code do not use ```'use strict'``` in global scope. Better do that in function scope. It plays out well in scope.
 
