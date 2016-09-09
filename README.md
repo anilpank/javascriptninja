@@ -88,7 +88,9 @@ else {
 - But in Javascript it is a good practise to make all variable declrations to go on top of your scope. 
 - That does not mean you have to initialize everything on top. You just need to declare everything on top of your scope.
 
-
+### Functions
+- Functions in Javascript are first class objects. They are just same as int or string or boolean or object.
+- There are function declarations and function expressions.
 
 
 
