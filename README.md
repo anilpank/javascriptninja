@@ -91,7 +91,12 @@ else {
 ### Functions
 - Functions in Javascript are first class objects. They are just same as int or string or boolean or object.
 - There are function declarations and function expressions.
+- It is better to use function declarations instead of function expressions. (For reasons review functions.js).
+- While writing javascript Basically Follow the pattern 1) Variables First, 2) Then Functions, 3) Run Code. For examples look at variablesBestPractises.js.
 
+
+### Behaviors
+- Javascript is helpful. That's not always a good thing.
 
 
 
