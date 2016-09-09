@@ -70,7 +70,7 @@ else {
 - === There is no type conversion.
 - Generally we want to use ===
 - Bottom line is use === by default (this avoids automatic type conersions and cases when you want 0 as true value).
-- To see if a var exists, use type of undefined. typeof *omega !== 'undefined'*
+- To see if a var exists, use type of undefined. typeof ```omega !== 'undefined'```
 
 
 
