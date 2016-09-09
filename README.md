@@ -81,6 +81,14 @@ else {
 - Now go back to your file and save it and you will get your equals error.
 
 
+### Variables
+- Variables behave a bit differently in Javascript.
+- **(Hoisting)** Javascript's default behavior of moving all declarations to the top of current scope.
+- In other programming languages it is a good practise to declare variables where you use them immediately.
+- But in Javascript it is a good practise to make all variable declrations to go on top of your scope. 
+- That does not mean you have to initialize everything on top. You just need to declare everything on top of your scope.
+
+
 
 
 
