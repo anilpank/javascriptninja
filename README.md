@@ -51,6 +51,27 @@ function service(){
 }
 ```
 
+### Equality
+- How do I compare things in Javascript  == vs ===
+```javascript
+var x = 1;
+var y = '1';
+
+if (x == y) {
+    console.log('Equals');
+}
+else {
+    console.log('Not Equals');
+}
+```
+- The above code will print Equals.
+- In order to test a Javascript file, you need not always use browser. Just type node testEquals.js from command line.
+- == If variables are of different type, it will convert it to same time.
+- === There is no type conversion.
+- Generally we want to use ===
+- Bottom line is use === by default (this avoids automatic type conersions and cases when you want 0 as true value).
+- To see if a var exists, use type of undefined. typeof *omega !== 'undefined'*
+
 
 
 
