@@ -9,6 +9,7 @@ function myFunc() {
 
 myFunc();
 
+//This is a function expression
 var expression = function () {
     console.log('Hi From the expression');
 }

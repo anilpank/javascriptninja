@@ -105,3 +105,6 @@ else {
 - Use ```'use strict';``` as shown in strictMode.js file. That would make sure that unintended code would blow up.
 - In production code do not use ```'use strict'``` in global scope. Better do that in function scope. It plays out well in scope.
 
+### Read only properties
+- Have a look at example readOnlyFields.js. If you don't use strict mode, and make a property read only, if you assign some value to the property, value does not get changed and you don't even get an error.
+- When you use strict mode, then you would get a valid error TypeError: Cannot assign to read only property. Have a look at readOnlyFileStrict.js
