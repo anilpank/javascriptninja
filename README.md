@@ -122,3 +122,7 @@ else {
 - When you use strict mode, then you get an error Octal literals are not allowed in strict mode.
 - When you really want to use Octal, use parseInt function.
 
+### The with statement
+- When you are inside a with block, it violates lexical scope, making program analysis hard to infeasible. (Look at with.js).
+- When you use strict mode, you get error Strict mode code may not include a with statement.
+- There is an alternate way of achieving the same without with. It is through immediate function expression. Have a look at withAlternate.js.
