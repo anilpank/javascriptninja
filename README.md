@@ -126,3 +126,11 @@ else {
 - When you are inside a with block, it violates lexical scope, making program analysis hard to infeasible. (Look at with.js).
 - When you use strict mode, you get error Strict mode code may not include a with statement.
 - There is an alternate way of achieving the same without with. It is through immediate function expression. Have a look at withAlternate.js.
+
+### What is THIS
+- This is the most confusing thing in Javascript.
+- Javascript basically looks at the left side of the DOT(.)  and that becomes This. (have a look at this.js)
+- When there is no DOT(.) Then it defaults to binding to Global object.
+- With strict mode, when there is no DOT(.), it does not default to anything. It is undefined.
+- There is one more way when you can bind a function to an object. Refer to this.js.
+- It does not matter where function is declared, for example here in obj. What matters where the function is executed.
