@@ -108,3 +108,9 @@ else {
 ### Read only properties
 - Have a look at example readOnlyFields.js. If you don't use strict mode, and make a property read only, if you assign some value to the property, value does not get changed and you don't even get an error.
 - When you use strict mode, then you would get a valid error TypeError: Cannot assign to read only property. Have a look at readOnlyFileStrict.js
+
+### Deleting Stuff
+- delete keyword can only delete something from an object. It can't delete variables or objects. It just fails silently. (Review deleting.js)
+- When you use strict mode, you get an error (Delete of an unqualified identifier in strict mode).  Review deletingStrict.js 
+
+
