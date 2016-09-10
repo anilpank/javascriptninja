@@ -111,6 +111,9 @@ else {
 
 ### Deleting Stuff
 - delete keyword can only delete something from an object. It can't delete variables or objects. It just fails silently. (Review deleting.js)
-- When you use strict mode, you get an error (Delete of an unqualified identifier in strict mode).  Review deletingStrict.js 
+- When you use strict mode, you get an error (Delete of an unqualified identifier in strict mode).  Review deletingStrict.js. 
 
+### Duplicates
+- There can be cases where you accidently put duplicate param names in method arguments. Then if you don't have strict mode, Javascript takes later argument and uses it's values. Have a look at duplicate.js
+- When you use strict mode, then you get SyntaxError: Duplicate parameter name not allowed in this context. Have a look at duplicateStrict.js.
 
