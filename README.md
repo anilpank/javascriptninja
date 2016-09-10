@@ -117,3 +117,8 @@ else {
 - There can be cases where you accidently put duplicate param names in method arguments. Then if you don't have strict mode, Javascript takes later argument and uses it's values. Have a look at duplicate.js
 - When you use strict mode, then you get SyntaxError: Duplicate parameter name not allowed in this context. Have a look at duplicateStrict.js.
 
+### Numbers
+- If you put 0 in front of a number, javascript becomes helpful and thinks of it as an Octal Number. Refer to octal.js
+- When you use strict mode, then you get an error Octal literals are not allowed in strict mode.
+- When you really want to use Octal, use parseInt function.
+
