@@ -134,3 +134,6 @@ else {
 - With strict mode, when there is no DOT(.), it does not default to anything. It is undefined.
 - There is one more way when you can bind a function to an object. Refer to this.js.
 - It does not matter where function is declared, for example here in obj. What matters where the function is executed.
+- A new keyword creates a new this scope. Have a look at this.js
+- Inside an object this might refer to local this or gloabl this adding to confusion.
+- Ultimate best practise is when you are dealing with This keyword, it is easier to take a copy of it and use the copy throughout rather than always figure out what this might refer to. (Refer to thatObj.js for reference)
