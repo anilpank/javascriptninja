@@ -167,4 +167,5 @@ else {
 - babel es6.js -o es6converted.js (Use this command to convert your es6 code to code consumable by older es5 browsers).
 - es6.js shows how we can use es6 features like let for older browsers as well.
 
+We need a way to avoid this megaunit of tools and technologies and frameworks. Tools are for solving problems, not making them. We will soon start seeing simplification in Javascript development. Keep it simple
 
