@@ -137,3 +137,27 @@ else {
 - A new keyword creates a new this scope. Have a look at this.js
 - Inside an object this might refer to local this or gloabl this adding to confusion.
 - Ultimate best practise is when you are dealing with This keyword, it is easier to take a copy of it and use the copy throughout rather than always figure out what this might refer to. (Refer to thatObj.js for reference)
+
+### Async Patterns
+- Callbacks (Gross looking code, christmas tree code).
+- Promises 
+- Async
+
+### Callbacks
+- Nest callback in callback in callback ending up in christmas tree code which is difficult to debug.
+- One way to get rid of this callback hell cum Chirstmas tree code is using named functions instead of anonymous functions.
+- One more best practise around callbacks is return your callbacks.
+
+### Promises
+- Promises extract the callback function.
+- Have a look at a simple asynchronous method and how it leads to classic Christmas tree code in app.js and promise.html.
+- Now have a look at realPromise.html and promise.js. Promises are not natively available in Browsers.  You need to go to include  https://www.promisejs.org/polyfills/promise-7.0.4.min.js in order for promises to work.
+- In your async method you can return a promise.
+- A promise takes function as an argument. This function can take two parameters (fulfill and reject). Fulfill means our function worked. Reject means it didn't.
+- What the promise has done is taken the callback and pulled it out of parameter.
+- That is what promise essentially achieves, it makes our functions thennable.
+- By using named functions instead of anonymous functions, you can have a better looking code. (less Christmas tree).
+- To take the code to next level, you can basically return promises from your functions. 
+- All this is described in promise.js and realPromise.html
+
+
