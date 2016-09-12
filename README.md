@@ -158,6 +158,13 @@ else {
 - That is what promise essentially achieves, it makes our functions thennable.
 - By using named functions instead of anonymous functions, you can have a better looking code. (less Christmas tree).
 - To take the code to next level, you can basically return promises from your functions. 
-- All this is described in promise.js and realPromise.html
+- All this is described in promise.js and realPromise.html.
+
+### ES6 and Babel
+- ES6 has some really cool stuff but not all browsers support the syntax. There is still a way around using Es6 still in older browsers.
+- npm install -g babel-cli
+- npm install --save-dev  babel-preset-es2015
+- babel es6.js -o es6converted.js (Use this command to convert your es6 code to code consumable by older es5 browsers).
+- es6.js shows how we can use es6 features like let for older browsers as well.
 
 

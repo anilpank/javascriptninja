@@ -1,0 +1,7 @@
+{
+  //This would allow compile es2015 code to es5
+  "presets":[
+    "es2015"
+  ],
+  "plugins":[]
+}
