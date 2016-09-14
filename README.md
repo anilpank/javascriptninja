@@ -201,3 +201,10 @@ We need a way to avoid this megaunit of tools and technologies and frameworks. T
 - If X function is used as a constructor function with a new keyword, the object that is created, it's __proto__ property points to same as function's prototype.
 - Refer to prototype.js for detailed examples.
 - When we want to ask Javascript for a property value of an object, it looks first if object has the property and gets it's value, otherwise it looks for the property in it's prototype object. Refer to protoInherit.js for detailed examples.
+
+### Changing prototypes
+- Have a look at changing prototypes file changeProtoType.js to understand the statements below. 
+- Let's see what really happenned. Initially the Cat function and 2 instances of Cat, all are pointing to same prototype instance (say A) in memory. 
+- When we change the prototype of our function, what we really did was create a new Object (B) in memory and change the function's prototype property to point to that new Object (B). 
+- However the existing 2 instances (fluffy and muffin) point to same older prototype object (A).
+- When we created new snowBell Cat, it created a new Object and set it's instance to point to current prototype of our function (B)
