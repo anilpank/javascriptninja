@@ -190,7 +190,7 @@ We need a way to avoid this megaunit of tools and technologies and frameworks. T
 - Setting enumerable:false makes the key non iterable and does not show it in Object keys.
 - If configurable is false for a property, you can't change enumerable attribute, can't set again configurable to true and can't delete it.
 
-### Javascript Prototypes and inheritance
+#### Javascript Prototypes and inheritance
 - Functions have prototype property which is nothing but an empty object.
 - An object literal does not have a prototype property.
 - Although it does have a __proto__ property.
@@ -202,9 +202,12 @@ We need a way to avoid this megaunit of tools and technologies and frameworks. T
 - Refer to prototype.js for detailed examples.
 - When we want to ask Javascript for a property value of an object, it looks first if object has the property and gets it's value, otherwise it looks for the property in it's prototype object. Refer to protoInherit.js for detailed examples.
 
-### Changing prototypes
+#### Changing prototypes
 - Have a look at changing prototypes file changeProtoType.js to understand the statements below. 
 - Let's see what really happenned. Initially the Cat function and 2 instances of Cat, all are pointing to same prototype instance (say A) in memory. 
 - When we change the prototype of our function, what we really did was create a new Object (B) in memory and change the function's prototype property to point to that new Object (B). 
 - However the existing 2 instances (fluffy and muffin) point to same older prototype object (A).
 - When we created new snowBell Cat, it created a new Object and set it's instance to point to current prototype of our function (B)
+
+#### Creating prototype Chains
+- Have a look at multilevelInherit.js in order to see how multi level inheritance works and how to create prototype chains.
