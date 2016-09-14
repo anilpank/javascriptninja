@@ -169,3 +169,35 @@ else {
 
 We need a way to avoid this megaunit of tools and technologies and frameworks. Tools are for solving problems, not making them. We will soon start seeing simplification in Javascript development. Keep it simple
 
+### Javascript Best practises section ends here. Below there are general notes on Javascript
+
+
+#### Javascript Cool Things
+- http://matthew.wagerfield.com/parallax/
+- http://threejs.org/
+- https://www.leapmotion.com/
+- Javascript prompt takes input as alert.
+
+#### Javascript primitive data types
+- String
+- Number
+- Boolean
+- Null
+- Undefined
+
+#### Javascript object creation
+- Look at constructor.js
+- Setting enumerable:false makes the key non iterable and does not show it in Object keys.
+- If configurable is false for a property, you can't change enumerable attribute, can't set again configurable to true and can't delete it.
+
+### Javascript Prototypes and inheritance
+- Functions have prototype property which is nothing but an empty object.
+- An object literal does not have a prototype property.
+- Although it does have a __proto__ property.
+- A function's prototype is the object instance that will become prototype for all objects created using this function as a constructor.
+- An Object's prototype is the object instance from which the object is inherited.
+- A prototype is not like a class. It is an object.
+- If a function X is created, a prototype object is created and attached to it behind the scenes.
+- If X function is used as a constructor function with a new keyword, the object that is created, it's __proto__ property points to same as function's prototype.
+- Refer to prototype.js for detailed examples.
+- When we want to ask Javascript for a property value of an object, it looks first if object has the property and gets it's value, otherwise it looks for the property in it's prototype object. Refer to protoInherit.js for detailed examples.
