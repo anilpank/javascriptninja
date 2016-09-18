@@ -54,7 +54,7 @@
 - File API (browser access to sandbox areas of user's computer) 
 - Forms (built in validation, add custom validation)
 - Geolocation (location of the user)
-- IndexedDB (Local storage of data, MB large) (Object Database)
+- IndexedDB (Local storage of data, MB large) (Object Database) (It has replaced WebSQL database)
 - Checkout http://caniuse.com/ to find out which browsers support above APIs
 - Media Capture (Access camera, webcam and so on)
 - Microdata (Expose info to machines as easiliy as it is presented to users)
@@ -73,4 +73,13 @@
 - You don't need to wait till 2022. 
 - Use features which are done and use workarounds/polyfills for others.
 
-#### Markup Examples
+#### Detecting HTML5
+- Use https://modernizr.com/ library in order to detect for html5 features.
+
+#### DOM selection
+- New selectors available.
+- getElementsByClassName (This is live set, if someone adds element of this class, this set automatically gets updated)
+- querySelector (expects CSS 3 arguments) (it will give first result)
+- querySelectorAll (expects CSS 3 selections arguments) (gives all results)
+- You can used querySelector/querySelectorAll on document as well as individual html elements as well. (These are not live sets)
+- 
