@@ -211,3 +211,9 @@ We need a way to avoid this megaunit of tools and technologies and frameworks. T
 
 #### Creating prototype Chains
 - Have a look at multilevelInherit.js in order to see how multi level inheritance works and how to create prototype chains.
+
+### Javascript Scope
+- Javascript does not have block level scope.
+-  Javascript everything is passed by reference (except primitive types which are passed by value just like Java)
+
+

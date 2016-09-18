@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+    <!-- Shows the use of Document.activeElement. You can instantly get selected text here and also current active element. -->
+    <body onload="init()">
+        <div>
+            Select some text from one of the text areas below. 
+        </div>
+        <form id="frm-example">
+            <textarea name="ta-example-one" id="ta-example-one" ></textarea>
+            <textarea name="ta-example-two" id="ta-example-two" ></textarea>
+        </form>
+        
+        Active Element Id: <span id="output-element"></span><br/>
+        Selected Text: <span id="output-text"></span>
+        <script src="focus.js"></script>
+    </body>
+</html>
