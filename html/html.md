@@ -102,3 +102,5 @@
 - stepMismatch - Range element's value is impossible given the step value.
 - valid returns true when all other validations are false.
 - e.srcElement gives the source element which triggered the event.
+
+- Testing ssh key
