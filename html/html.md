@@ -104,3 +104,4 @@
 - e.srcElement gives the source element which triggered the event.
 
 - Testing ssh key
+-  git+ssh://github.com/anilpank/javascriptninja
