@@ -82,4 +82,23 @@
 - querySelector (expects CSS 3 arguments) (it will give first result)
 - querySelectorAll (expects CSS 3 selections arguments) (gives all results)
 - You can used querySelector/querySelectorAll on document as well as individual html elements as well. (These are not live sets)
-- 
+
+#### Forms in HTML5
+- new input element types (color, month, url, datalist, number, week, date, range, datetime, search, datetime-local, tel, email, time)
+- Attributes novalidate, autofocus, required, min, max, step, pattern, maxlength
+- div class="invalid" just below form input type.
+
+#### Forms validation pseudo classes
+- Ensure that css rules show in correct order, then you can get a lot of validations without writing a lot of javascript code.
+- Use data-rule attribute of span class inside a div class (validation-messages) to define multiple custom validations.
+
+#### Native validation rules
+- valueMissing rule is applied when you add required attribute.
+- typeMisMatch rule is applied when value of the element is not matched to declared type. (Say user enters invalid values for type url, email).
+- patternMisMatch rule is applied when value of element does not match against regular expression in pattern attribute.
+- tooLong rule is applied when value of element is longer than maxLength rule.
+- rangeUnderflow rule is true when range element's value is smaller than the min value.
+- rangeOverflow is similar.
+- stepMismatch - Range element's value is impossible given the step value.
+- valid returns true when all other validations are false.
+- e.srcElement gives the source element which triggered the event.
