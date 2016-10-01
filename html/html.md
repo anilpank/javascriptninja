@@ -221,3 +221,13 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 - attachedCallback -> Instance inserted to DOM
 - detachedCallback -> Instance removed from DOM
 - attributeChangedCallback -> Attributes are added, removed or updated
+
+### Shadow Dom Fundamentals
+- Shadow dom resolves scoping problem.
+- Shadow dom vs light dom
+- Shadow root, shadow boundary, shadow host, dom subtrees
+- How to avoid accidently styling other parts of the page?
+- How to avoid other developers accidently styling my component?
+- How to hide away my markup from accidental manipulation?
+
+
