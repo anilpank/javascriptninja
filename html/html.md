@@ -211,3 +211,8 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 - Create element var comment = document.createElement('pluralsight-comment'). You need to append to dom using javascript.
 - innerHTML el.innerHTML = '<pluralsight-comment/>';
 
+### 3 ways to instantiate extended element
+- Declare in markup. <button is='super-button'></button>
+- Via javascript. var button = document.createElement('button', 'super-button');
+- Using new operator. document.body.appendChild(new SuperButton);
+
