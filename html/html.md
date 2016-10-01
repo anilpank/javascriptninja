@@ -241,3 +241,16 @@ var XFooExtended = document.registerElement('x-foo-extended', {
  <input type="date">
 </pre>
 - If you want to see shadow dom behind these native elements, in Google chrome developer tools Settings, use Elements and check on show User agent shadow DOM.
+
+### Shadow DOM Hacks
+- Shadow Dom encapsulates DOM subtrees and styles.
+- Today iframe is commonly used to get separate scope and styling. Examples include Google Map and YouTube Videos
+- iFrames are designed to embed another full document,accesing values in iFrame document from parent document is hassle.
+- iFrames are undescriptive.
+- Frames provide excessive encapsulation.
+- No clean API to allow iFrame and iFrame's host page to interact.
+- Another hack for shadow dom is canvas tag
+- But canvas tag has accesiblity issues, SEO issues and can't easily compose.
+- Can't extend existing elements.
+
+
