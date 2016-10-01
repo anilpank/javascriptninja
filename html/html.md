@@ -103,5 +103,95 @@
 - valid returns true when all other validations are false.
 - e.srcElement gives the source element which triggered the event.
 
-- Testing ssh key
--  git+ssh://github.com/anilpank/javascriptninja
+#### Html5 Video and Audio
+- Encoding media
+- Try Miro video convertor to convert video into different formats.
+- No Javascript required in order to play media in browser.
+
+- Check out vidoe.html (video tag, controls, autoplay, loop attributes) <pre> <video controls width="320">
+            <source src="2015-06-09 20.47 MTCM Demo.mp4"/>
+        </video></pre>
+
+### HTML5 Webcomponent fundamentals
+- Undescriptive markup (so much nesting) is a big problem.
+- Style conflicts (bigger problem)
+- Avoiding style conflicts requires highly specific CSS selectors.
+- Use of !important to force styles
+- No guarantee another style won't conflict.
+- No native templates. We can import javascript with script tag, css with style tag and images with img tag, but we can't import html.
+- We store html in hidden dom elements and manually extract when necessary. (leads to styling struggles)
+- We use iframe sometime to get separate scope and styling. (interaction between iframe and hosting page is awkward)
+- No bundling (can't bundle css, javascript and html together)
+- No standard (jquery, bootstrap, extjs, Angular, KendoUI, wijmo, jquery)
+- Undescriptive markup, no standards, style conflicts, no native templates, no bundling. All these problems have one solution Web components
+- Templates (Inert reusable markup), Custom Elements (Define our own elements), Shadow Dom (encapsulated markup and styling), Imports (Bundle html, js and css together)
+- Chrome is the first browser to support Web components (Templates, Html Imports, Custom Elements and Shadow Dom). Other browsers can be supported thrpugh polyfills
+
+### Why learn native web components first?
+- Learning jquery before javascript was a problem.
+- Always learn foundation before learning abstraction.
+-  If making a billing app, the base component can be called billapp and then component within components
+
+
+### Future of web components
+- Communities will rally around components.
+- Github will measure interest.
+- Popular components will drive future HTML elements.
+
+### Why webcomponents
+- Web components will make markup easier to read/understand, don't have to start from zero everytime, build simple clear modular and extendible code
+- Reduced bugs in components.
+- Fewer integration mistakes.
+- Reduced learning curves.
+- Web components is biggest thing since AJAX 2005.
+
+### Templates
+- Use template tag
+- It is inert. It does nothing until cloned.
+- Anything inside template is hidden from selectors.
+- You can place template tag anywhere head, body, frameset,etc.
+
+### Template Activation
+<pre>
+var template = document.querySelector('#myTemplate');
+var clone = document.importNode(template.content, true); //true signifies deep copying
+document.body.appendChild(clone);
+</pre>
+
+### Inject Data into templates
+- Inject data before cloning by manipulating the template clone
+<pre>
+//1 Get a reference to the template
+var template = document.querySelector('template');
+var clone = document.importNode(template.content, true); 
+//Change the target element within the template as desired
+clone.querySelector('.verb').textContent = 'awesome';
+//Append element to page
+document.body.appendChild(clone);
+</pre>
+
+
+### Nested templates
+- Must manually clone both parent and child templates.
+
+### Custom Elements
+- Define your own custom html elements which look feel and behave like native html elements
+- Our current html markup isn't descriptive
+- Descriptive markup conveys additional information, improves SEO, enhances accesiblity, speeds development, aids maintainence
+- div/span element should be used only when no other semantic element is available
+
+### Our own custom elements
+- Define your own custom elements, name must have a dash. (my-component)
+- Custom elements can extend existing html elements using is attribute <input type="text" is="search">
+
+### Registering Custom Elements
+- Create a prototype (You are creating a shadow root and utilize desired template to populate shadow root). All custom elements are derived from 
+HTMLElement.prototype prototype. But when you are extending a native HTML element, then you need to put type of native html element.
+<pre>
+var SlickTabs = Object.create(HTMLElement.prototype);
+</pre>
+- Register the new element via registerElement
+<pre>
+ document.registerElement('slick-tabs');
+</pre>
+

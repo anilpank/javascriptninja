@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+    <body>
+        <h4>Video</h4>
+        <video controls width="320">
+            <source src="2015-06-09 20.47 MTCM Demo.mp4"/>
+            <p>The browser does not support native video</p>
+        </video>
+        
+        
+        <h4>Audio</h4>
+        <audio controls loop>
+            <source src="Champion - Dwayne DJ Bravo.mp3"/>
+            <h1>This browser does not support native audio.</h1>
+        </audio>
+        
+         <h4>Video</h4>
+        <video id="vid" width="320">
+            <source src="2015-06-09 20.47 MTCM Demo.mp4"/>
+            <p>The browser does not support native video</p>
+        </video>
+        <div>
+            <input type="range" id="scrubber" min="0" max="60" value="0" step="1" />
+            <span id="remainingTime">0:00</span>
+            <span id="totalTime">0:00</span>
+        </div>
+        
+        <div>
+            <button class="btn" id="playPause">Play</button>
+            <button class="btn" id="stop">Stop</button>
+            <button class="btn" id="begin">&lt;&lt;</button>
+            <button class="btn" id="rewind">&lt;</button>
+            <button class="btn" id="fastForward">&gt;</button>
+            <button class="btn" id="end">&gt;&gt;</button>
+        </div>
+        <div>
+            <input type="range" id="volume" min="0" step="0.1" max="1"/>
+            <button class="btn" id="mute">Mute</button>
+         </div>
+        
+        <div>
+            Speed <input type="range" id="playBackRate" min="1" value="1" step="1" max="4" />
+        </div>
+        
+        <script src="video.js"></script>
+    </body>
+</html>
