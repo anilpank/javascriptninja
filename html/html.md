@@ -230,4 +230,14 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 - How to avoid other developers accidently styling my component?
 - How to hide away my markup from accidental manipulation?
 
-
+### Two types of DOMS
+- Light Dom (The Dom that you know today)
+- Shadow Dom (The Dom that hides away complexity)
+- Logical Dom (Umbrella above light dom and shadow dom)
+- Shadow Dom is already used today. Example below use shadow dom in order to hide their complex markup
+<pre>
+ <input type="range">
+ <video controls width="250"></video>
+ <input type="date">
+</pre>
+- If you want to see shadow dom behind these native elements, in Google chrome developer tools Settings, use Elements and check on show User agent shadow DOM.
