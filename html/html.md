@@ -194,4 +194,20 @@ var SlickTabs = Object.create(HTMLElement.prototype);
 <pre>
  document.registerElement('slick-tabs');
 </pre>
+- Use it! (Add to DOM or place tag on page).
+document.body.appendChild(new SlickTabs()); or <slick-tabs></slick-tabs>
+- You can extend custom elements too.
+<pre>
+var XFooProto = Object.create(HTMLElement.prototype);
+var XFooExtended = document.registerElement('x-foo-extended', {
+    prototype: XFooProto,
+	extends: 'x-foo'
+});
+</pre>
+
+### Four ways to instantiate components
+- Markup <pluralsight-comment/>
+- New operator var comment= new PluralSightComment(); . You need to append to dom using javascript
+- Create element var comment = document.createElement('pluralsight-comment'). You need to append to dom using javascript.
+- innerHTML el.innerHTML = '<pluralsight-comment/>';
 

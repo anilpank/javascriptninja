@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	</head>
+	
+	<body>
+		<!-- Option 1 -->
+		<pluralsight-comment></pluralsight-comment>
+		<script>
+			var PluralSightCommentProto = Object.create(HTMLElement.prototype);
+			PluralSightCommentProto.createdCallback = function() {
+			    this.innerHTML = "<h2>Pluralsight comment</h2><textarea></textarea><br/> <input type='submit'>";	
+			};
+			var PluralSightComment = document.registerElement('pluralsight-comment',  {
+				prototype: PluralSightCommentProto
+			});
+			
+			//<!-- Option 2 -->
+			var comment = new PluralSightComment();
+			document.body.appendChild(comment);
+			
+			//<!-- Option 3 -->
+			var el = document.createElement('pluralsight-comment');
+			document.body.appendChild(el);
+			
+			// Option 4 
+//			   document.body.innerHTML = '<pluralsight-comment></pluralsight-comment>';
+			
+		</script>
+	</body>
+</html>
