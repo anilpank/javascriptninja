@@ -216,3 +216,8 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 - Via javascript. var button = document.createElement('button', 'super-button');
 - Using new operator. document.body.appendChild(new SuperButton);
 
+### Lifecycle callback methods
+- createdCallback -> Instance is created
+- attachedCallback -> Instance inserted to DOM
+- detachedCallback -> Instance removed from DOM
+- attributeChangedCallback -> Attributes are added, removed or updated

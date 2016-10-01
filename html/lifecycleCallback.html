@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+	</head>
+	
+	<body>
+		<hello-world></hello-world>
+		<script>
+			var Proto = Object.create(HTMLElement.prototype);
+			Proto.createdCallback = function() {
+				this.innerHTML = '<h1>Hello World</h1>';				
+			};
+			
+			Proto.attachedCallback = function() {
+				console.log('Element is attached');
+			};
+			
+			Proto.detachedCallback = function() {
+				console.log('Element is detached');
+			};
+			
+			Proto.attributeChangedCallback = function(attrName, oldVal, newVal) {
+				console.log(attrName);
+				console.log(oldVal);
+				console.log(newVal);
+			};
+			
+			var Hello  = document.registerElement('hello-world', {
+				prototype:Proto
+			});
+			document.querySelector('hello-world').setAttribute('test', 1);
+			//document.querySelector('hello-world').remove();
+			
+		</script>
+	</body>
+</html>
