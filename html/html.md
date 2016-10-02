@@ -266,4 +266,12 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 - Have a look at createShadowRoot.html for complete example.
 - Shadom DOM encapsulates it's own css rules and does not get affected by outside css rules.
 
+### Shadow Host & Boundary
+- Element in light dom which is hosting shadow dom.
+- Check for the element which hosts #shadow-root.
+- CSS selectors that apply for shadow dom, don't apply outside the shadow dom. Styles in shadow dom don't cross over the boundary. (There are some exceptions)
+- Shadow boundary separates light dom from shadow dom & encapsulates dom subtree.
+- Shadow boundary benefits (Simpler selectors, simpler markup, enhanced readablity and avoid accidental styling)
+
+
 
