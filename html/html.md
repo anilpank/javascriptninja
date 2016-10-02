@@ -253,4 +253,17 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 - But canvas tag has accesiblity issues, SEO issues and can't easily compose.
 - Can't extend existing elements.
 
+### Create Shadow Dom (3 step process)
+- Select Shadow Host (Element in light dom that will wrap shadow root) (Video tag is an example of shadow host)
+- Create a shadow root.
+- Add elements to shadow dom the same way you do today. (innerHTML, appendChild)
+<pre>
+            var goodhost = document.getElementById('goodhost');			
+			var goodRoot = goodhost.createShadowRoot();
+			var template = document.querySelector('template');
+			goodRoot.appendChild(document.importNode(template.content, true));
+</pre>
+- Have a look at createShadowRoot.html for complete example.
+- Shadom DOM encapsulates it's own css rules and does not get affected by outside css rules.
+
 
