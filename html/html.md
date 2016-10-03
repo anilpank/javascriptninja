@@ -273,5 +273,12 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 - Shadow boundary separates light dom from shadow dom & encapsulates dom subtree.
 - Shadow boundary benefits (Simpler selectors, simpler markup, enhanced readablity and avoid accidental styling)
 
+### ShadowRoot DOM methods
+- getElementById()
+- getElementsByClassName()
+- getElementsByTagName()
+- getElementsByTagNameNS()
+- querySelector()
+- querySelectorAll()
 
 
