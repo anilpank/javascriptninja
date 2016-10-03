@@ -281,4 +281,10 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 - querySelector()
 - querySelectorAll()
 
+### Is javascript encapsulated in shadow DOM
+- No
+- But elements inside the shadow dom can't be easily manipulated (without using highly specific APIs) by outside Javascript.
+
+
+
 

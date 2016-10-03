@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<style>
+			h1 {
+			  color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='host'></div>
+		
+		<div id='goodhost'></div>
+		<template>
+			<style>
+				h1 {
+					color:greenyellow;
+				}
+			</style>
+			<h1>Nice heading coming from template</h1>			
+		</template>
+		<h1>Only this will change color</h1>
+		<script>
+			var host = document.getElementById('host');
+			var root = host.createShadowRoot();
+			root.innerHTML = '<h1>Hello world from shadow dom</h1>';			
+			var goodhost = document.getElementById('goodhost');			
+			var goodRoot = goodhost.createShadowRoot();
+			var template = document.querySelector('template');
+			goodRoot.appendChild(document.importNode(template.content, true));
+			
+			//Only light dom elements are visible.
+			console.log(document.querySelector('h1'));
+			console.log(goodRoot.querySelector('h1'));
+		</script>
+	</body>
+</html>
