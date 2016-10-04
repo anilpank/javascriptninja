@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head></head>
+	
+	<body>
+		<div id='host'>
+			LIGHT DOM
+		</div>
+		
+		<script>
+			var host = document.querySelector('#host');
+			//root1 is the oldest shadow tree
+			var root1 = host.createShadowRoot(host);
+			
+			//As soon as your created root2, root1 was overridden. Now only root2 will render.
+			var root2 = host.createShadowRoot(host);
+			
+			//root3 us youngest shadow tree
+			var root3 = host.createShadowRoot(host);
+			root1.innerHTML = '<div>Root 1</div>';
+			
+			//Placement of shadow tag is crucial just like content tag
+			root2.innerHTML = '<content></content><div>Root 2</div><shadow></shadow>';
+			//Also if you create multiple shadow tags only first one will be honoured.
+			// select attribute in content tag does not apply in shadow tag. shadow tag simply matches previous shadow root declared for a shadow host.
+			root3.innerHTML = '<div>Root 3</div><shadow></shadow>';
+			
+			//This will give older shadow root to root2
+			console.log(root2.olderShadowRoot);
+			
+			//This will give the youngest shadow root of a host
+			console.log(host.shadowRoot);
+			
+			
+		</script>
+	</body>
+</html>

@@ -310,3 +310,14 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 - ID selector <content select='#target'></content>
 - Negation pseudo class <content select=':not(.ugly)'></content>
 - Universal selector <content></content>
+
+### Shadow insertion points
+- shadow tag is similar to content tag with one difference.
+- shadow tag is used for hosting other shadow trees.
+- Shadow tag allows you to create shadow dom insertion points within a shadow dom. (Shadow dom inception)
+- When we have multiple shadow trees, youngest tree is last one added. Previous trees are called older trees.
+- The first shadow tag added to shadow host wins, if you add multiple shadow tags to a shadow host, only the first one will render.
+- Have a look at shadowInsertionPoints.html for further details.
+
+### Get Distributed Nodes
+- 
