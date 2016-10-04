@@ -7,6 +7,7 @@
 			<h1>Tell us what's on your mind</h1>
 			<p class="instructions">Fill out this form</p>
 			<p class='footer'>This is a footer</p>
+			<input type="button" value="reset">
 			abcdsdff
 		</comment-form>
 		<template>
@@ -19,10 +20,11 @@
 				<textarea style='width: 400px; height: 200px;'></textarea>
 				<br/>
 				<input type='submit' value='Submit Comment'>
-				
+				<!-- Placement of content tag matters -->
+				<content select='input[type=button]'></content>
 				<content select='.footer'></content>
 				
-				<!-- This is a catch all block. Empty content selector is greedy. -->
+				<!-- This is a catch all block, empty content selector matches everything which hasn't been caught-->
 				<content></content>
 			</fieldset>
 		</template>

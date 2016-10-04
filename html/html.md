@@ -303,6 +303,10 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 - <content></content> Any content that is distributed here can't be traversed (with traditional APIs at least).
 - Have a look at traverseDistributedNodes.html for detailed example.
 
-
-
-
+### Supported <content></content> selectors
+- Type selector <content select='p'></content>
+- Class selector <content select='.target'></content>
+- Attribute selector <content select='input type=[text]'></content>
+- ID selector <content select='#target'></content>
+- Negation pseudo class <content select=':not(.ugly)'></content>
+- Universal selector <content></content>
