@@ -286,5 +286,14 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 - But elements inside the shadow dom can't be easily manipulated (without using highly specific APIs) by outside Javascript.
 
 
+### Shadow Dom insertion points and events
+- Content insertion points
+- Shadow insertion points
+- Events
+
+### Content Insertion points
+- Content select is greedy. First match will match all.
+- Have a look at contentInsertion.html
+
 
 

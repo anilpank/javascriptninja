@@ -1,0 +1,43 @@
+<html>
+	<head>
+	</head>
+	
+	<body>
+		<comment-form>
+			<h1>Tell us what's on your mind</h1>
+			<p class="instructions">Fill out this form</p>
+			<p class='footer'>This is a footer</p>
+			abcdsdff
+		</comment-form>
+		<template>
+			<fieldset>
+				<legend>
+					<content select='h1'></content>
+				</legend>
+				<!-- content select should be as specific as possible. -->
+				<content select='p.instructions'></content>
+				<textarea style='width: 400px; height: 200px;'></textarea>
+				<br/>
+				<input type='submit' value='Submit Comment'>
+				
+				<content select='.footer'></content>
+				
+				<!-- This is a catch all block -->
+				<content></content>
+			</fieldset>
+		</template>
+		
+		<script>
+			var CommentProto = Object.create(HTMLElement.prototype);
+			CommentProto.createdCallback = function () {
+				var template = document.querySelector("template");
+				var shadow = this.createShadowRoot();				
+				shadow.appendChild(document.importNode(template.content, true));				
+			};
+			
+			document.registerElement('comment-form', {
+			    prototype: CommentProto						 
+			});
+		</script>
+	</body>
+</html>
