@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+	</head>
+	
+	<body>
+		<div>
+			<h1>Header defined in light DOM</h1>
+		</div>
+		<script>
+			var root = document.querySelector('div').createShadowRoot();
+			root.innerHTML = '<content select="h1"></content>';
+			console.log(document.querySelector('h1'));
+			
+			//h1 has not moved to Shadow Dom. It has just been distributed to shadow dom 
+			console.log(document.querySelector('content h1'));
+			var contentElem = root.querySelector('content');
+			console.log(contentElem);
+		</script>	
+		
+	</body>
+</html>

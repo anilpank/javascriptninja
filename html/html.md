@@ -295,5 +295,14 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 - Content select is greedy. First match will match all.
 - Have a look at contentInsertion.html
 
+### Insertion points vs distributed nodes
+- content creates an insertion point.
+- Elements inserted at this insertion point are called distributed nodes.
+- Distributed nodes are merely displayed at the insertion point. They are not actually inserted into the shadow dom.
+- The distributed nodes still remain part of light dom.
+- <content></content> Any content that is distributed here can't be traversed (with traditional APIs at least).
+- Have a look at traverseDistributedNodes.html for detailed example.
+
+
 
 
