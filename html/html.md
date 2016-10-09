@@ -323,3 +323,7 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 - What elements are being distributed into this <content></content> tag? getDistributedNodes() gives you the list.
 - All the places a given dom element is inserted into the shadow dom? Then getDestionationInsertionPoints() gives the answer.
 - Think of getDestionationInsertionPoints() as opposite of getDistributedNodes() method.
+
+### Event targeting
+- Events in shadowm dom are retargeted. So when events happen in shadow dom, they are retargeted so that they appear to come from shadow host.
+- Events will appear to come from shadow host.
