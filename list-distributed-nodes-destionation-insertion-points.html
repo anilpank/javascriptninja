@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	</head>
+	
+	<body>
+		<div id='host'>
+			<ul>
+			<li>Wilber</li>
+			<li>Alfred</li>
+			<li>Mortimer</li>
+			</ul>
+		</div>
+		
+		<template>
+			<h1>Bad Cat names</h1>
+			<content id='test'></content>
+		</template>
+		
+		<script>
+			var host = document.querySelector('#host');
+			var root = host.createShadowRoot();
+			var template = document.querySelector('template');
+			var clone = document.importNode(template.content, true);
+			root.appendChild(clone);
+			
+			var distributedNodes = root.querySelector('content').getDistributedNodes();
+			console.log(distributedNodes);
+			
+			var destinationInsertionPoints = document.querySelector('ul').getDestinationInsertionPoints();
+			console.log(destinationInsertionPoints);
+		</script>
+		
+		
+		
+	</body>
+</html>

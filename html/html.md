@@ -320,4 +320,6 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 - Have a look at shadowInsertionPoints.html for further details.
 
 ### Get Distributed Nodes
-- 
+- What elements are being distributed into this <content></content> tag? getDistributedNodes() gives you the list.
+- All the places a given dom element is inserted into the shadow dom? Then getDestionationInsertionPoints() gives the answer.
+- Think of getDestionationInsertionPoints() as opposite of getDistributedNodes() method.
