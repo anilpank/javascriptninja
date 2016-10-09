@@ -327,3 +327,6 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 ### Event targeting
 - Events in shadowm dom are retargeted. So when events happen in shadow dom, they are retargeted so that they appear to come from shadow host.
 - Events will appear to come from shadow host.
+
+### Some events just stop
+- abort, error, select, change, load, reset, resize, scroll, selectstart events just stop in shadow dom, not visible to host
