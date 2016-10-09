@@ -338,3 +338,14 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 ### Theming shadow host
 - :host(.awesome)
 - :host(.lame)
+
+### Host specificity
+- :host has low specificity.
+- more specific selectors in light dom may override it.
+- inline styles and id styles will override :host styles.
+
+#### CSS Specificity rules (From most to least specific)
+- Inline style <p style='color:red;'></p>
+- ID #myElement {color: red; }
+- Class, pseudo class, attribute .myClass {color: red; }
+- Elements p {color: red; }
