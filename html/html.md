@@ -334,3 +334,7 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 ### Shadow DOM styling
 - New CSS concepts
 - Style shadow host using :host pseudo selector.
+
+### Theming shadow host
+- :host(.awesome)
+- :host(.lame)
