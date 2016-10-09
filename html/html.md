@@ -349,3 +349,6 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 - ID #myElement {color: red; }
 - Class, pseudo class, attribute .myClass {color: red; }
 - Elements p {color: red; }
+
+### Styling shadow host states
+- You can style states as well. :host(:hover) (mouse hover), :host(:active)(on clicked), :host(:visited)(when it is visisted), :host(:link) (unvisited anchors).
