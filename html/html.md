@@ -352,3 +352,10 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 
 ### Styling shadow host states
 - You can style states as well. :host(:hover) (mouse hover), :host(:active)(on clicked), :host(:visited)(when it is visisted), :host(:link) (unvisited anchors).
+
+### Styling the host context
+- style the shadow dom based on context.
+- :host-context (Shadow host or it's ancestors match the selector).
+-  host-context will pierce the shadow boundary (all the way upto document root if necessary) looking for matching selector.
+- host pseudo selector just looks at the shadow host.
+- 

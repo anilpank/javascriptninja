@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+	</head>
+	
+	<body>
+		<div id='host' class='warning'>
+			<p>My host is styled via the :host selector.</p>
+		</div>
+		
+		<template>
+			 <style>
+				 :host(.error) {
+					 border: solid 1px red;
+				 }
+				 :host(.warning) {
+					 border: solid 1px yellow;
+				 }
+				 
+				 :host(:hover) {
+					 background-color: aqua;
+				 }
+			</style>
+			<content></content>
+		</template>
+		
+		<script>
+			var host = document.querySelector('#host');
+			var root = host.createShadowRoot();
+			var template = document.querySelector('template');
+			root.appendChild(document.importNode(template.content, true));
+		</script>
+	</body>
+</html>
