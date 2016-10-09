@@ -30,7 +30,11 @@
 			
 			document.addEventListener('change', function(e) {
 				console.log(e.target.id + ' changed');
-			})
+			});
+			
+			root.addEventListener('change', function(e) {
+				console.log(e.target.id + 'changed in root');
+			});
 		</script>
 	</body>
 </html>

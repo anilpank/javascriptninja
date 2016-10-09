@@ -330,3 +330,7 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 
 ### Some events just stop
 - abort, error, select, change, load, reset, resize, scroll, selectstart events just stop in shadow dom, not visible to host
+
+### Shadow DOM styling
+- New CSS concepts
+- Style shadow host using :host pseudo selector.
