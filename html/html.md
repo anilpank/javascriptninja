@@ -365,4 +365,10 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 - ::content p { color:red; }
 - ::content > button { border: 1px solid red}
 
-### 
+### Styling shadow dom from light dom
+- You thought shadow dom was protected from styling from outside.
+- Suppose you are using a 3rd party components library, and there is one little thing (error message is in orange) that you would like to change.
+- But you would not want to change the components per se as the next version of component library will break the thing.
+- You can then use ::shadow to style shadow dom from light dom.
+- Example is like this. #host::shadow li {color:red;}
+- ::shadow will only style elements in the first level shadow tree.
