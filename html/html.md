@@ -404,3 +404,20 @@ myComponent.style.background = 'red';
 - Imagine you create a component using bootstrap and jquery. 
 - Imports can bundle your component as single call. (Like Java import)
 
+### Import Examples
+- HTMLimport uses link tag
+<pre>
+<link rel="import" href="stuffToImport.html">
+<link rel='import' href='http://othersite.com/import.html'>
+</pre>
+- The value of href is called import location.
+- Link must sit in <head></head>
+- Any HTML in an import is inert until it is cloned on your page.
+- But Javascript and css run and apply immediately.
+- Imports from separate domain must support CORS. (The URL must have cross origin resource sharing enabled)
+- Programmatically access import content.
+<pre>
+var content = document.querySelector('#my-import').import;
+</pre>
+
+
