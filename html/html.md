@@ -376,3 +376,12 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 ### Style shadow dom from light dom (styling all shadows)
 - Like ::shadow, but styles all layers of shadow subtrees, (instead of just first level). It's called /deep/
 - HTML /deep/ is now a depricated feature.
+
+### Avoid flash of unstyled content (FOUC)
+- All custom elments tags (for example x-button) are plain old HTML elements until the browser finishes calling the createdCallback method.
+- To avoid a flash of unstyled content, use :unresolved.
+- :unresolved matches unresolved elements. Once createdCallback is called, the element is resolved.
+- my-component { opacity: 1;}   my-component:unresolved {opacity: 0;}
+- :unresolved only applies to custom elements, only elements with dash(-) in their name.
+
+- 
