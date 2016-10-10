@@ -372,3 +372,7 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 - You can then use ::shadow to style shadow dom from light dom.
 - Example is like this. #host::shadow li {color:red;}
 - ::shadow will only style elements in the first level shadow tree.
+
+### Style shadow dom from light dom (styling all shadows)
+- Like ::shadow, but styles all layers of shadow subtrees, (instead of just first level). It's called /deep/
+- HTML /deep/ is now a depricated feature.
