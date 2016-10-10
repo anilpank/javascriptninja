@@ -358,4 +358,11 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 - :host-context (Shadow host or it's ancestors match the selector).
 -  host-context will pierce the shadow boundary (all the way upto document root if necessary) looking for matching selector.
 - host pseudo selector just looks at the shadow host.
-- 
+
+
+### Styling distributed nodes
+- style nodes that pass through an insertion point with ::content selector.
+- ::content p { color:red; }
+- ::content > button { border: 1px solid red}
+
+### 
