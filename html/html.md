@@ -390,3 +390,17 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 var myComponent = document.createElement('my-component');
 myComponent.style.background = 'red';
 </pre>
+
+
+### HTML5 Imports
+- How do we import HTML.
+- importing css <link rel="stylesheet" href="style.css" />
+- importing javascript <script src='jquery.js'></script>
+- import HTML. So many hacks. Ajax calls, iFrames, script tags, hidden divs
+- Both are ways to store inert HTML (import vs template).
+- But only import supports inert HTML in a separate file.
+- Only imports support bundling.
+- Bundling is important.
+- Imagine you create a component using bootstrap and jquery. 
+- Imports can bundle your component as single call. (Like Java import)
+
