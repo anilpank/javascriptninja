@@ -384,4 +384,9 @@ var XFooExtended = document.registerElement('x-foo-extended', {
 - my-component { opacity: 1;}   my-component:unresolved {opacity: 0;}
 - :unresolved only applies to custom elements, only elements with dash(-) in their name.
 
-- 
+### Dynamic styling of custom elements
+- Just like Light DOM elements: 
+<pre>
+var myComponent = document.createElement('my-component');
+myComponent.style.background = 'red';
+</pre>
