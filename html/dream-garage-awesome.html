@@ -1,0 +1,37 @@
+<template>	
+	<a href='#' id='view-disclaimer'>Disclaimer</a>
+	<ul>
+	<li>Audi Q5</li>
+	<li>BMW Bimmer</li>
+	<li>Maruti Ciaz</li>
+    </ul>
+</template>
+
+
+
+
+<script>
+	( function() {
+		
+		var Proto = Object.create(HTMLElement.prototype);
+		var importDoc = document.currentScript.ownerDocument;
+		
+		Proto.createdCallback = function () {
+			var template = importDoc.querySelector('template');
+			var templateClone = document.importNode(template.content, true);
+			var disclaimer = templateClone.querySelector('#view-disclaimer');
+			
+			//var disclaimer = importDoc.querySelector('#view-disclaimer');
+			disclaimer.addEventListener('click', function() {
+				console.log('I cannot even afford even one of these cars');
+			});
+			var root = this.createShadowRoot();
+			root.appendChild(templateClone);
+		};
+		
+		document.registerElement('dream-garage', {
+			prototype: Proto
+		});
+	})();
+	
+</script>

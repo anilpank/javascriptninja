@@ -420,6 +420,19 @@ myComponent.style.background = 'red';
 var content = document.querySelector('#my-import').import;
 </pre>
 
+### Other uses of imports
+- Themes 
+- Component library (bundle related components together)
+- App sections (bundle sections of your app)
+- An entire app.
+
+### Reference the owner document
+- Suppose you have 2 files, import.html and index.html 
+- And content of index.html is <link rel='import' href='import.html'>
+- Then if you write document.querySelector in import.html, it runs as if it is running in index.html
+- If you want to avoid this, make sure you use this. (document.currentScript.ownerDocument)
+- 
+
 
 
 

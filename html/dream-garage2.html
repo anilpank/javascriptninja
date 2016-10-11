@@ -1,0 +1,17 @@
+<ul>
+	<li>Audi Q5</li>
+	<li>BMW Bimmer</li>
+	<li>Maruti Ciaz</li>
+</ul>
+
+<p id='disclaimer'>
+	I can not afford one of these cars, sorry, not even one :(
+</p>
+
+<script>
+	var importDoc = document.currentScript.ownerDocument
+	function getDisclaimer() {
+		console.log(document.querySelector('#disclaimer') == null);
+		console.log(importDoc.querySelector('#disclaimer').innerText);
+	}
+</script>
